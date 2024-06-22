@@ -40,27 +40,27 @@ public class servlet1 extends HttpServlet {
             out.println("<!DOCTYPE html>");
             out.println("<html>");
             out.println("<head>");
-            out.println("<title>Servlet servlet1</title>");            
+            out.println("<title> register</title>");            
             out.println("</head>");
             out.println("<body>");
             out.println("<h1>Servlet servlet1</h1>");
             out.println("<div>");
-            out.println("<p>Lista de parámetros de contexto<p>");
+            out.println("<p> Datos <p>");
             out.println("<ul>");
             out.println("<li>");
-            String parametroContexto1 = request.getParameter("parametroContexto1");
-            out.println("parametroContexto1 = " + request.getParameter("parametroContexto1"));
+            String param1 = request.getParameter("usuario");
+            out.println("parametroContexto1 = " + request.getParameter("correo"));
             out.println("</li>");
             out.println("<li>");
-            String parametroContexto2 = request.getParameter("parametroContexto2");
-            out.println("parametroContexto2 = " + request.getParameter("parametroContexto2"));
+            String param = request.getParameter("contra");
+            out.println("parametroContexto2 = " + request.getParameter("confcontra"));
             out.println("</li>");
             Enumeration<String> ParameterNames = getServletContext().getInitParameterNames();
             while(ParameterNames.hasMoreElements()){
                 String pName = ParameterNames.nextElement();
-                out.println("<li>" + pName + " =" + getServletContext().getInitParameter(pName) + "</li>");
+                out.println("<li>" + usuario + " =" + getServletContext().getInitParameter(usuario) + "</li>");
             }
-            out.println("<p>Lista de parametros iniciales del servlet</p>");
+            out.println("<p> </p>");
             Enumeration<String> initParamNames = getInitParameterNames();
             while(initParamNames.hasMoreElements()){
                 String pName = initParamNames.nextElement();
